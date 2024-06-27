@@ -1,30 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>每日精品</title>
-        <style>
-            .box{
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>欢迎您的光临！</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <style>
+            *{
+                /* 初始化 取消页面内外边距 */
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                /* 100%窗口高度 */
+                height: 100vh;
+                /* 渐变背景 */
+            /*   background: linear-gradient(to bottom,#89f7fe,#66a6ff); */
+            }
+            .wave{
+                width: 200px;
+                height: 200px;
+                background-color: #2797e7;
+                border-radius: 50%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                box-shadow: 0 0 50px rgba(255,255,255,0.2);
+                /* 加个溢出隐藏 */
+                overflow: hidden;
+            }
+            .wave::before{
+                content: "";
+                width: 300px;
                 height: 300px;
-                border: 1px solid red;
-                background: url("./img/gif.gif");
+                background-color: rgba(255,255,255,0.8);
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%,-65%);
+                border-radius: 40%;
+                /* 执行动画：动画名称 时长 线性的 无限次播放 */
+                animation: wave 5s linear infinite;
+            }
+            .wave::after{
+                content: "选择线路中...";
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%,40px);
+                color: #2797e7;
+            }
+            
+            /* 定义动画 */
+            @keyframes wave{
+                100%{
+                    transform: translate(-50%,-65%) rotate(360deg);
+                }
             }
         </style>
     </head>
-<body style="background-color: black;">   
-<meta charset="utf-8">
-<meta http-equiv="refresh" content="3;https://www.iv.edu.mo/home">
-<p align="center"><font color="yellow"><font size="10">三秒后跳转</font></font></p>
-<div style="color:white;" align="right">
-    <span>
-          <script type="text/javascript">
-            var date = new Date()
-            document.write("更新日期:" + date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日");
-          </script>
-    </span>
-</div>
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-</body>
+    <body> 
+        <div class="wave"></div>
+        <div>
+            <div>
+                <h1 style="padding:20px 0px 10px 0px " align="center"><span style="color: #FF00CC">免 费 海 量</h1>
+            </div>
+            <div class="enter">
+                <a href="https://www.iv.edu.mo/home
+                " target="_blank"><div class="btn-enter c_ddd">移动线路1</div></a><a href="https://www.iv.edu.mo/home
+                " target="_blank"><div class="btn-enter c_ddd">移动线路2</div></a><a href="https://www.iv.edu.mo/home
+                " target="_blank"><div class="btn-enter c_ddd">移动线路3</div></a><a href="https://www.iv.edu.mo/home
+                " target="_blank"><div class="btn-enter c_ddd">移动线路4</div></a><a href="https://www.iv.edu.mo/home
+                " target="_blank"><div class="btn-enter c_ddd">联通线路1</div></a><a href="https://www.iv.edu.mo/home
+                " target="_blank"><div class="btn-enter c_ddd">联通线路2</div></a><a href="https://www.iv.edu.mo/home
+                " target="_blank"><div class="btn-enter c_ddd">联通线路3</div></a><a href="https://www.iv.edu.mo/home
+                " target="_blank"><div class="btn-enter c_ddd">电信通用1</div></a><a href="https://www.iv.edu.mo/home
+                " target="_blank"><div class="btn-enter c_ddd">电信通用2</div></a><a href="https://www.iv.edu.mo/home
+                " target="_blank"><div class="btn-enter c_ddd">电信通用3</div></a><a href="https://www.iv.edu.mo/home
+                " target="_blank"><div class="btn-enter c_ddd">电信通用4</div></a></div>			
+            </div>
+            <div style="color:black" align="right">
+                <span>
+                      <script type="text/javascript">
+                        var date = new Date()
+                        document.write("更新日期:" + date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日");
+                      </script>
+                </span>
+            </div>
+        </div>
+    </body>
 </html>
